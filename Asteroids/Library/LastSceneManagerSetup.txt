@@ -1,5 +1,5 @@
 sceneSetups:
-- path: C:/Users/zacdalla/Desktop/Sprite/Sprite-Mover/Assets/Scenes/SpriteMover.unity
+- path: Assets/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
