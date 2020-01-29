@@ -19,6 +19,16 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
             Debug.LogError("I tried to create a second Game Manager");
         }
+        
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Application.Quit();
+        }
     }
 
 }
+
