@@ -38,4 +38,14 @@ public class ShipControls : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    void OnCollisionEnter2D(Collision2D otherObject)
+    {
+
+    }
+
+    void OnCollisionExit2D(Collision2D otherObject)
+    {
+
+    }
 }
