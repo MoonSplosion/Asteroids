@@ -48,4 +48,18 @@ public class ShipControls : MonoBehaviour
     {
 
     }
+
+    void OnDestroy()
+    {
+        // If the Player dies, they lose a life.
+        GameManager.instance.lives -= 1;
+        if (GameManager.instance.lives > 0)
+        {
+            GameManager.instance.Respawn();
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        }
+    }
 }
