@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public bool isPaused = false;
     public GameObject playerPrefab;
     public GameObject Player;
+    public GameObject enemy1Prefab;
+    public GameObject enemy2Prefab;
+    public GameObject enemy3Prefab;
 
     public void  Awake()
     {
@@ -37,6 +40,14 @@ public class GameManager : MonoBehaviour
     public void Respawn()
     {
         Instantiate(playerPrefab);
+       
+    }
+
+    public void EnemyRespawn()
+    { 
+        Instantiate(enemy1Prefab);
+        Instantiate(enemy2Prefab);
+        Instantiate(enemy3Prefab);
     }
 
 }

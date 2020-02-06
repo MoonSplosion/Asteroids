@@ -41,7 +41,7 @@ public class ShipControls : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D otherObject)
     {
-
+        Destroy(gameObject);
     }
 
     void OnCollisionExit2D(Collision2D otherObject)
@@ -62,4 +62,6 @@ public class ShipControls : MonoBehaviour
             Debug.Log("Game Over");
         }
     }
+
+  
 }
