@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
     public bool isPaused = false;
     public GameObject playerPrefab;
     public GameObject Player;
+    public GameObject asteroidPrefab;
     public GameObject enemy1Prefab;
     public GameObject enemy2Prefab;
     public GameObject enemy3Prefab;
+    public List<GameObject> enemiesList = new List<GameObject>();
 
     public void  Awake()
     {
@@ -29,25 +31,35 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void Start()
+    {
+        Instantiate(enemy1Prefab);
+        Instantiate(enemy2Prefab);
+        Instantiate(enemy3Prefab);
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.Space))
         {
             Application.Quit();
         }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Instantiate(asteroidPrefab);
+        }
     }
 
     public void Respawn()
     {
-        Instantiate(playerPrefab);
+       Player =  Instantiate(playerPrefab);
        
     }
 
     public void EnemyRespawn()
-    { 
-        Instantiate(enemy1Prefab);
-        Instantiate(enemy2Prefab);
-        Instantiate(enemy3Prefab);
+    {
+         Instantiate(enemy1Prefab);
     }
 
 }

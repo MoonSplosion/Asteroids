@@ -39,10 +39,10 @@ public class ShipControls : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    void OnCollisionEnter2D(Collision2D otherObject)
-    {
-        Destroy(gameObject);
-    }
+   // void OnCollisionEnter2D(Collision2D otherObject)
+   // {
+   //     Destroy(this.gameObject);
+   // }
 
     void OnCollisionExit2D(Collision2D otherObject)
     {
