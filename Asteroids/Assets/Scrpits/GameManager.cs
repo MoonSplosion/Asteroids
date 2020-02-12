@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemy2Prefab;
     public GameObject enemy3Prefab;
     public List<GameObject> enemiesList = new List<GameObject>();
+    public GameObject[] enemyPrefabs;
 
     public void  Awake()
     {

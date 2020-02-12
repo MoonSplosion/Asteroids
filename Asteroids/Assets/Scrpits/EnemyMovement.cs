@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         tform = gameObject.GetComponent<Transform>();
+        GameManager.instance.enemiesList.Add(this.gameObject);
     }
     // Update is called once per frame
     void Update()
@@ -19,6 +20,17 @@ public class EnemyMovement : MonoBehaviour
 
     void OnDestroy()
     {
-        GameManager.instance.EnemyRespawn();
+        //GameManager.instance.EnemyRespawn();
+        GameManager.instance.enemiesList.Remove(this.gameObject);
+    }
+    void OnCollisionEnter2D(Collision2D otherObject)
+    {
+
+        if (otherObject.gameObject.name == "Player")
+        {
+            Destroy(otherObject.gameObject);
+            Destroy(this.gameObject);
+
+        }
     }
 }

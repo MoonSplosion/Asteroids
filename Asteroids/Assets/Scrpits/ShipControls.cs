@@ -8,6 +8,8 @@ public class ShipControls : MonoBehaviour
     private Transform tf;
     public float rotationSpeed = 1.0f;
     public float shipSpeed = 1.0f;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
     void Start()
     {
         tf = gameObject.GetComponent<Transform>();
@@ -36,7 +38,7 @@ public class ShipControls : MonoBehaviour
 
     public void Shoot()
     {
-        throw new NotImplementedException();
+        Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
     }
 
    // void OnCollisionEnter2D(Collision2D otherObject)
@@ -44,10 +46,10 @@ public class ShipControls : MonoBehaviour
    //     Destroy(this.gameObject);
    // }
 
-    void OnCollisionExit2D(Collision2D otherObject)
-    {
+   // void OnCollisionExit2D(Collision2D otherObject)
+   // {
 
-    }
+   // }
 
     void OnDestroy()
     {

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 693654645251907060}
   - component: {fileID: 693654645251907061}
   m_Layer: 0
-  m_Name: starShipV1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-  m_Children: []
+  m_Children:
+  - {fileID: 5790022229236669569}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -97,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 150
   shipSpeed: 8
+  bulletPrefab: {fileID: 3134009200227880596, guid: d97fbbb90e217b84d87f6cde86b0ea81,
+    type: 3}
 --- !u!50 &693654645251907060
 Rigidbody2D:
   serializedVersion: 4
@@ -231,3 +234,33 @@ PolygonCollider2D:
       - {x: -0.275, y: -1.3149999}
       - {x: -0.005, y: -1.285}
       - {x: 0.055, y: -1.265}
+--- !u!1 &9074765951636447315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5790022229236669569}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5790022229236669569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074765951636447315}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
+  m_LocalScale: {x: 2.5000005, y: 2.5000005, z: 2.5}
+  m_Children: []
+  m_Father: {fileID: 693654645251907059}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
